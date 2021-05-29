@@ -201,3 +201,122 @@ vi pod.yaml
 vi deployment.yaml
 history
 gcloud container clusters resize my-cluster --size=0
+history
+gcloud container clusters resize my-cluster --size=3
+ls
+cd kuber
+ld
+ls
+vi clusterip.yaml
+vi nodeport.yaml
+vi clusterip.yaml
+vi nodeport.yaml
+kubectl create -f nodeport.yaml
+vi nodeport.yaml
+kubectl create -f nodeport.yaml
+vi nodeport.yaml
+kubectl get service
+kubectl delete service nginix-service
+ls
+kubectl get service
+kubectl create -f nodeport.yaml
+kubectl get service
+kubectl describe nginix-service
+kubectl describe service nginix-service
+kubectl delete -f NodePort
+kubectl delete service nginix-service
+kubectl get service
+ls
+cat clusterip.yaml 
+vi loadbalancer.yaml
+cat nodeport.yaml
+vi loadbalancer.yaml
+kubectl create -f loadbalancer.yaml
+kubectl get nodes
+kubectl get service
+kubectl get service -w
+gcloud container clusters update cluster-name --enable-autoscaling     --min-nodes 1 --max-nodes 5
+gcloud container clusters update my-cluster --enable-autoscaling     --min-nodes 1 --max-nodes 10
+root@kubernets:~/kuber# gcloud container clusters update my-cluster --enable-autoscaling >     --min-nodes 1 --max-nodes 6
+gcloud container clusters update my-cluster --enable-autoscaling     --min-nodes 1 --max-nodes 6
+gcloud container clusters update my-cluster --enable-autoscaling > >     --min-nodes 1 --max-nodes 6
+gcloud container clusters update my-cluster --enable-autoscaling     --min-nodes 1 --max-nodes 6
+gcloud get my-cluster
+gcloud container clusters update my-cluster --enable-autoscaling     --min-nodes 1 --max-nodes 6
+ls
+vi deployment.yaml 
+kubectl apply -f deployment.yaml
+kubectl get deployement.yaml
+kubectl get deployement
+kubectl get deployment
+kubectl get nodes
+kubectl get deployment
+vi deployment.yaml 
+kubectl apply -f deployment.yaml
+kubectl get deployement.yaml
+kubectl get deployment
+clear
+kubectl get service 
+ls
+cat --min-nodes
+cd ..
+ls
+git push kuber 
+git
+ls
+git login
+git config --global user.name "vijayshankar485"
+git config --global user.email "vijayshankar485@gmail.com"
+git push kuber
+git add kuber
+ls
+git init
+ls
+git add kuber
+git add.
+git add .
+git push https://github.com/vijayshankar485/edureka-devops-15th-july.git
+git push orgin master
+git push origin master
+git branch
+git clone https://github.com/vijayshankar485/edureka-devops-15th-july.git
+ls
+git status
+git commit -am "updated files"
+git remote -v
+git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+git remote add origin ssh://https://github.com/vijayshankar485/edureka-devops-15th-july.git
+git push origin master
+ssh: Could not resolve hostname https: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+git remote add origin https://github.com/vijayshankar485/edureka-devops-15th-july.git
+git push origin master
+git remote -v
+git push myOrigin master
+git push Origin master
+ls -al
+cd .git
+ls
+cd config
+ls config
+cat config
+cd ..
+rm -rf git
+ls -al
+git
+ls -al
+cd .git
+ls 
+cat branches
+cd branches
+ls
+ll
+ls -al
+cd ..
+ls
+clear
+history
