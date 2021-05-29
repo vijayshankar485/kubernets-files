@@ -1,0 +1,8 @@
+[core]
+account = cmdbvijay@gmail.com
+project = coastal-hue-314206
+
+[compute]
+zone = asia-south1-c
+region = asia-south1
+

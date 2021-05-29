@@ -1,0 +1,15 @@
+2021-05-20 11:19:00,717 DEBUG    root            Loaded Command Group: ['gcloud', 'services']
+2021-05-20 11:19:00,738 DEBUG    root            Loaded Command Group: ['gcloud', 'services', 'enable']
+2021-05-20 11:19:00,741 DEBUG    root            Running [gcloud.services.enable] with arguments: [SERVICE:1: "['container.googleapis.com']"]
+2021-05-20 11:19:00,813 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2021-05-20 11:19:02,911 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "POST /v1/projects/coastal-hue-314206/services/container.googleapis.com:enable?alt=json HTTP/1.1" 200 None
+2021-05-20 11:19:02,927 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2021-05-20 11:19:04,538 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/operations/acf.p2-292914610678-c524022d-bace-422d-8735-ec39fb1dd11a?alt=json HTTP/1.1" 200 None
+2021-05-20 11:19:06,893 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2021-05-20 11:19:08,504 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/operations/acf.p2-292914610678-c524022d-bace-422d-8735-ec39fb1dd11a?alt=json HTTP/1.1" 200 None
+2021-05-20 11:19:11,179 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2021-05-20 11:19:12,787 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/operations/acf.p2-292914610678-c524022d-bace-422d-8735-ec39fb1dd11a?alt=json HTTP/1.1" 200 None
+2021-05-20 11:19:12,793 INFO     ___FILE_ONLY___ Operation "operations/acf.p2-292914610678-c524022d-bace-422d-8735-ec39fb1dd11a" finished successfully.
+
+2021-05-20 11:19:12,794 INFO     root            Display format: "none"
+2021-05-20 11:19:12,795 DEBUG    root            SDK update checks are disabled.

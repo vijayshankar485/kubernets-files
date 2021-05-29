@@ -1,0 +1,50 @@
+2021-05-20 11:17:15,274 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-20 11:17:15,287 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-20 11:17:15,295 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'create']
+2021-05-20 11:17:15,359 DEBUG    root            Running [gcloud.container.clusters.create] with arguments: [NAME: "my-cluster"]
+2021-05-20 11:17:15,366 WARNING  root            Accessing a Kubernetes Engine cluster requires the kubernetes commandline
+client [kubectl]. To install, run
+  $ gcloud components install kubectl
+
+2021-05-20 11:17:15,368 WARNING  root            Starting in January 2021, clusters will use the Regular release channel by default when `--cluster-version`, `--release-channel`, `--no-enable-autoupgrade`, and `--no-enable-autorepair` flags are not specified.
+2021-05-20 11:17:15,369 WARNING  root            Currently VPC-native is not the default mode during cluster creation. In the future, this will become the default mode and can be disabled using `--no-enable-ip-alias` flag. Use `--[no-]enable-ip-alias` flag to suppress this warning.
+2021-05-20 11:17:15,369 WARNING  root            Starting with version 1.18, clusters will have shielded GKE nodes by default.
+2021-05-20 11:17:15,370 WARNING  root            Your Pod address range (`--cluster-ipv4-cidr`) can accommodate at most 1008 node(s). 
+2021-05-20 11:17:15,370 WARNING  root            Starting with version 1.19, newly created clusters and node-pools will have COS_CONTAINERD as the default node image when no image type is specified.
+2021-05-20 11:17:16,715 DEBUG    root            (gcloud.container.clusters.create) ResponseError: code=400, message=Failed precondition when calling the ServiceConsumerManager: tenantmanager::185014: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.
+com.google.api.tenant.error.TenantManagerException: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.
+Traceback (most recent call last):
+  File "/snap/google-cloud-sdk/182/lib/surface/container/clusters/create.py", line 922, in Run
+    operation_ref = adapter.CreateCluster(cluster_ref, options)
+  File "/snap/google-cloud-sdk/182/lib/googlecloudsdk/api_lib/container/api_adapter.py", line 1843, in CreateCluster
+    operation = self.client.projects_locations_clusters.Create(req)
+  File "/snap/google-cloud-sdk/182/lib/googlecloudsdk/third_party/apis/container/v1/container_v1_client.py", line 440, in Create
+    config, request, global_params=global_params)
+  File "/snap/google-cloud-sdk/182/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/snap/google-cloud-sdk/182/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/snap/google-cloud-sdk/182/lib/third_party/apitools/base/py/base_api.py", line 610, in __ProcessHttpResponse
+    http_response, method_config=method_config, request=request)
+apitools.base.py.exceptions.HttpBadRequestError: HttpError accessing <https://container.googleapis.com/v1/projects/coastal-hue-314206/locations/asia-south1-c/clusters?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'date': 'Thu, 20 May 2021 11:17:16 GMT', 'server': 'ESF', 'cache-control': 'private', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'status': '400', 'content-length': '441', '-content-encoding': 'gzip'}>, content <{
+  "error": {
+    "code": 400,
+    "message": "Failed precondition when calling the ServiceConsumerManager: tenantmanager::185014: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.\ncom.google.api.tenant.error.TenantManagerException: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.",
+    "status": "FAILED_PRECONDITION"
+  }
+}
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snap/google-cloud-sdk/182/lib/googlecloudsdk/calliope/cli.py", line 982, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/snap/google-cloud-sdk/182/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/snap/google-cloud-sdk/182/lib/surface/container/clusters/create.py", line 933, in Run
+    raise exceptions.HttpException(error, util.HTTP_ERROR_FORMAT)
+googlecloudsdk.calliope.exceptions.HttpException: ResponseError: code=400, message=Failed precondition when calling the ServiceConsumerManager: tenantmanager::185014: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.
+com.google.api.tenant.error.TenantManagerException: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.
+2021-05-20 11:17:16,725 ERROR    root            (gcloud.container.clusters.create) ResponseError: code=400, message=Failed precondition when calling the ServiceConsumerManager: tenantmanager::185014: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.
+com.google.api.tenant.error.TenantManagerException: Consumer 292914610678 should enable service:container.googleapis.com before generating a service account.

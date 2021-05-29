@@ -1,0 +1,19 @@
+2021-05-29 12:49:43,841 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-29 12:49:43,846 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-29 12:49:43,848 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'update']
+2021-05-29 12:49:43,901 DEBUG    root            Running [gcloud.container.clusters.update] with arguments: [--enable-autoscaling: "True", --max-nodes: "10", --min-nodes: "1", NAME: "my-cluster"]
+2021-05-29 12:49:44,122 INFO     ___FILE_ONLY___ Updating my-cluster...
+2021-05-29 12:49:56,359 DEBUG    root            (gcloud.container.clusters.update) Aborted by user.
+Traceback (most recent call last):
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/calliope/cli.py", line 982, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/snap/google-cloud-sdk/183/lib/surface/container/clusters/update.py", line 594, in Run
+    timeout_s=args.timeout)
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/api_lib/container/api_adapter.py", line 1216, in WaitForOperation
+    time.sleep(poll_period_s)
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/core/console/progress_tracker.py", line 149, in _CtrlCHandler
+    raise console_io.OperationCancelledError(self._aborted_message)
+googlecloudsdk.core.console.console_io.OperationCancelledError: Aborted by user.
+2021-05-29 12:49:56,363 ERROR    root            (gcloud.container.clusters.update) Aborted by user.

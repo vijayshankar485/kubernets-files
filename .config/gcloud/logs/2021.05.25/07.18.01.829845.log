@@ -1,0 +1,21 @@
+2021-05-25 07:18:01,836 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-25 07:18:01,840 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-25 07:18:01,843 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'resize']
+2021-05-25 07:18:01,844 WARNING  root            The --size flag is now deprecated. Please use `--num-nodes` instead.
+2021-05-25 07:18:01,884 DEBUG    root            Running [gcloud.container.clusters.resize] with arguments: [--size: "0", NAME: "my-cluster"]
+2021-05-25 07:18:06,731 INFO     ___FILE_ONLY___ Resizing my-cluster...
+2021-05-25 07:22:31,427 INFO     root            Operation <Operation
+ clusterConditions: []
+ endTime: '2021-05-25T07:22:26.026788769Z'
+ name: 'operation-1621927086690-7bcbb404'
+ nodepoolConditions: []
+ operationType: OperationTypeValueValuesEnum(SET_NODE_POOL_SIZE, 14)
+ selfLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/operations/operation-1621927086690-7bcbb404'
+ startTime: '2021-05-25T07:18:06.690670584Z'
+ status: StatusValueValuesEnum(DONE, 3)
+ targetLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/clusters/my-cluster/nodePools/default-pool'
+ zone: 'asia-south1-c'> succeeded after 264.695 seconds
+2021-05-25 07:22:31,527 INFO     ___FILE_ONLY___ Updated [https://container.googleapis.com/v1/projects/coastal-hue-314206/zones/asia-south1-c/clusters/my-cluster].
+
+2021-05-25 07:22:31,529 INFO     root            Display format: "default"
+2021-05-25 07:22:31,530 DEBUG    root            SDK update checks are disabled.

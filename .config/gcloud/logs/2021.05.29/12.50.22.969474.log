@@ -1,0 +1,31 @@
+2021-05-29 12:50:22,976 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-29 12:50:22,980 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-29 12:50:22,982 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'update']
+2021-05-29 12:50:23,035 DEBUG    root            Running [gcloud.container.clusters.update] with arguments: [--enable-autoscaling: "True", --max-nodes: "6", --min-nodes: "1", NAME: "my-cluster"]
+2021-05-29 12:50:23,230 DEBUG    root            (gcloud.container.clusters.update) FAILED_PRECONDITION: Operation operation-1622292584089-4538000e is currently upgrading cluster my-cluster. Please wait and try again once it is done.
+Traceback (most recent call last):
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/calliope/cli.py", line 982, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/snap/google-cloud-sdk/183/lib/surface/container/clusters/update.py", line 588, in Run
+    op_ref = adapter.UpdateCluster(cluster_ref, options)
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/api_lib/container/api_adapter.py", line 2323, in UpdateCluster
+    update=update))
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/third_party/apis/container/v1/container_v1_client.py", line 845, in Update
+    config, request, global_params=global_params)
+  File "/snap/google-cloud-sdk/183/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/snap/google-cloud-sdk/183/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/snap/google-cloud-sdk/183/lib/third_party/apitools/base/py/base_api.py", line 610, in __ProcessHttpResponse
+    http_response, method_config=method_config, request=request)
+apitools.base.py.exceptions.HttpBadRequestError: HttpError accessing <https://container.googleapis.com/v1/projects/coastal-hue-314206/locations/asia-south1-c/clusters/my-cluster?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'date': 'Sat, 29 May 2021 12:50:23 GMT', 'server': 'ESF', 'cache-control': 'private', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'status': '400', 'content-length': '221', '-content-encoding': 'gzip'}>, content <{
+  "error": {
+    "code": 400,
+    "message": "Operation operation-1622292584089-4538000e is currently upgrading cluster my-cluster. Please wait and try again once it is done.",
+    "status": "FAILED_PRECONDITION"
+  }
+}
+>
+2021-05-29 12:50:23,232 ERROR    root            (gcloud.container.clusters.update) FAILED_PRECONDITION: Operation operation-1622292584089-4538000e is currently upgrading cluster my-cluster. Please wait and try again once it is done.

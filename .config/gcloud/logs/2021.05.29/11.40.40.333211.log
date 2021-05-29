@@ -1,0 +1,31 @@
+2021-05-29 11:40:40,335 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-05-29 11:40:40,340 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'config_helper']
+2021-05-29 11:40:40,342 DEBUG    root            Running [gcloud.config.config-helper] with arguments: [--format: "json"]
+2021-05-29 11:40:40,360 INFO     root            Display format: "default json"
+2021-05-29 11:40:40,361 INFO     ___FILE_ONLY___ {
+  "configuration": {
+    "active_configuration": "kube8-",
+    "properties": {
+      "compute": {
+        "region": "asia-south1",
+        "zone": "asia-south1-c"
+      },
+      "core": {
+        "account": "cmdbvijay@gmail.com",
+        "disable_usage_reporting": "True",
+        "project": "coastal-hue-314206"
+      }
+    }
+  },
+  "credential": {
+    "access_token": "ya29.a0AfH6SMCkiel7s9r3PQNSYKWeFbCH1i77C1W-T0oGrj8JcyUNQzqTtFX0LjSJme9KR1-CUI01V5JasOiY5jQKgQCL0JDNLN6piI52KJtF4gWeSQiy4zMb5jH-XjQrUm8scVsaCMk3fIFQwDKHkaoGeEOrAXUc9eMH_EyjdQ",
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkNDliMmFiMTZlMWU5YTQ5NmM4MjM5ZGFjMGRhZGQwOWQ0NDMwMTIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA5MjI3NjM0ODE5NzI1MTM2OTM4IiwiZW1haWwiOiJjbWRidmlqYXlAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJTN05oWkh3bjU1ZFFjTWs0UWRDZFFBIiwiaWF0IjoxNjIyMjg3NzUzLCJleHAiOjE2MjIyOTEzNTN9.RAye7tP_-QjXL_oU8rNckWPwF89gOMX2oui23YlpjZeFwEOm7hF4sNH0VZ3CQKLkcmSyso_gLTprgJ2GSYadKh5s7mb6lzzV0-mk9AlTJraeiJqKLH4hSs7KTAaaOGy4w967xTyky8TO_J3zmn_jyp8NFI3cMu1oltIrQvRNJsbZ5EuWx68eM5lhoq-p6PX9S7VxvpMscs_zjA2xgXMqnAMGhPpv1PSFrHo6K8FZNVurBoykNuwm3GQl3kOzRjxuZJP_4albDZJtR6pVC7TxyQnv_xtFS6ip8OvsewjOPoRljYmKctpQQbq9CgUw5765BwsEHlb1ITAJJ6QmBVIeFA",
+    "token_expiry": "2021-05-29T12:29:12Z"
+  },
+  "sentinels": {
+    "config_sentinel": "/root/.config/gcloud/config_sentinel"
+  }
+}
+2021-05-29 11:40:40,361 INFO     ___FILE_ONLY___ 
+
+2021-05-29 11:40:40,361 DEBUG    root            SDK update checks are disabled.

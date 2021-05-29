@@ -1,0 +1,12 @@
+2021-05-19 07:17:05,999 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-19 07:17:06,011 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'operations']
+2021-05-19 07:17:06,016 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'get_server_config']
+2021-05-19 07:17:06,019 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'node_pools']
+2021-05-19 07:17:06,022 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'images']
+2021-05-19 07:17:06,023 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'binauthz']
+2021-05-19 07:17:06,027 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-19 07:17:06,030 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'subnets']
+2021-05-19 07:17:06,032 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'hub']
+2021-05-19 07:17:06,035 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'container']
+2021-05-19 07:17:06,036 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'container']
+2021-05-19 07:17:06,038 ERROR    root            (gcloud.container) Invalid choice: 'cluster'.

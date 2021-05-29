@@ -1,0 +1,22 @@
+2021-05-29 12:56:23,667 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-29 12:56:23,672 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-29 12:56:23,674 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'update']
+2021-05-29 12:56:23,727 DEBUG    root            Running [gcloud.container.clusters.update] with arguments: [--enable-autoscaling: "True", --max-nodes: "6", --min-nodes: "1", NAME: "my-cluster"]
+2021-05-29 12:56:23,945 INFO     ___FILE_ONLY___ Updating my-cluster...
+2021-05-29 12:56:29,110 INFO     root            Operation <Operation
+ clusterConditions: []
+ endTime: '2021-05-29T12:56:24.42088993Z'
+ name: 'operation-1622292983916-b4c4f99a'
+ nodepoolConditions: []
+ operationType: OperationTypeValueValuesEnum(UPDATE_CLUSTER, 6)
+ selfLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/operations/operation-1622292983916-b4c4f99a'
+ startTime: '2021-05-29T12:56:23.916668109Z'
+ status: StatusValueValuesEnum(DONE, 3)
+ targetLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/clusters/my-cluster/nodePools/default-pool'
+ zone: 'asia-south1-c'> succeeded after 5.164 seconds
+2021-05-29 12:56:29,158 INFO     ___FILE_ONLY___ Updated [https://container.googleapis.com/v1/projects/coastal-hue-314206/zones/asia-south1-c/clusters/my-cluster].
+
+2021-05-29 12:56:29,158 INFO     ___FILE_ONLY___ To inspect the contents of your cluster, go to: https://console.cloud.google.com/kubernetes/workload_/gcloud/asia-south1-c/my-cluster?project=coastal-hue-314206
+
+2021-05-29 12:56:29,159 INFO     root            Display format: "none"
+2021-05-29 12:56:29,159 DEBUG    root            SDK update checks are disabled.

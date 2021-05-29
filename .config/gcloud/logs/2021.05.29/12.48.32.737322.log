@@ -1,0 +1,41 @@
+2021-05-29 12:48:32,743 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-29 12:48:32,747 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-29 12:48:32,752 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'update']
+2021-05-29 12:48:32,797 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2021-05-29 12:48:32,801 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2021-05-29 12:48:32,974 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2021-05-29 12:48:32,991 DEBUG    root            Running [gcloud.container.clusters.update] with arguments: [--enable-autoscaling: "True", --max-nodes: "5", --min-nodes: "1", NAME: "cluster-name"]
+2021-05-29 12:48:33,577 WARNING  root            Problem loading details of cluster to update:
+
+ResponseError: code=404, message=Not found: projects/coastal-hue-314206/zones/asia-south1-c/clusters/cluster-name.
+No cluster named 'cluster-name' in coastal-hue-314206.
+
+You can still attempt updates to the cluster.
+
+2021-05-29 12:48:33,659 DEBUG    root            (gcloud.container.clusters.update) NOT_FOUND: Not found: projects/coastal-hue-314206/zones/asia-south1-c/clusters/cluster-name.
+Traceback (most recent call last):
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/calliope/cli.py", line 982, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/snap/google-cloud-sdk/183/lib/surface/container/clusters/update.py", line 588, in Run
+    op_ref = adapter.UpdateCluster(cluster_ref, options)
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/api_lib/container/api_adapter.py", line 2323, in UpdateCluster
+    update=update))
+  File "/snap/google-cloud-sdk/183/lib/googlecloudsdk/third_party/apis/container/v1/container_v1_client.py", line 845, in Update
+    config, request, global_params=global_params)
+  File "/snap/google-cloud-sdk/183/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/snap/google-cloud-sdk/183/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/snap/google-cloud-sdk/183/lib/third_party/apitools/base/py/base_api.py", line 610, in __ProcessHttpResponse
+    http_response, method_config=method_config, request=request)
+apitools.base.py.exceptions.HttpNotFoundError: HttpError accessing <https://container.googleapis.com/v1/projects/coastal-hue-314206/locations/asia-south1-c/clusters/cluster-name?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'date': 'Sat, 29 May 2021 12:48:33 GMT', 'server': 'ESF', 'cache-control': 'private', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'status': '404', 'content-length': '164', '-content-encoding': 'gzip'}>, content <{
+  "error": {
+    "code": 404,
+    "message": "Not found: projects/coastal-hue-314206/zones/asia-south1-c/clusters/cluster-name.",
+    "status": "NOT_FOUND"
+  }
+}
+>
+2021-05-29 12:48:33,670 ERROR    root            (gcloud.container.clusters.update) NOT_FOUND: Not found: projects/coastal-hue-314206/zones/asia-south1-c/clusters/cluster-name.

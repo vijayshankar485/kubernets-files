@@ -1,0 +1,24 @@
+2021-05-27 07:26:12,039 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-27 07:26:12,043 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-27 07:26:12,045 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'resize']
+2021-05-27 07:26:12,047 WARNING  root            The --size flag is now deprecated. Please use `--num-nodes` instead.
+2021-05-27 07:26:12,067 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2021-05-27 07:26:12,072 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2021-05-27 07:26:12,235 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2021-05-27 07:26:12,266 DEBUG    root            Running [gcloud.container.clusters.resize] with arguments: [--size: "0", NAME: "my-cluster"]
+2021-05-27 07:26:16,341 INFO     ___FILE_ONLY___ Resizing my-cluster...
+2021-05-27 07:30:30,569 INFO     root            Operation <Operation
+ clusterConditions: []
+ endTime: '2021-05-27T07:30:29.717575825Z'
+ name: 'operation-1622100376309-db75d0d2'
+ nodepoolConditions: []
+ operationType: OperationTypeValueValuesEnum(SET_NODE_POOL_SIZE, 14)
+ selfLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/operations/operation-1622100376309-db75d0d2'
+ startTime: '2021-05-27T07:26:16.309483516Z'
+ status: StatusValueValuesEnum(DONE, 3)
+ targetLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/clusters/my-cluster/nodePools/default-pool'
+ zone: 'asia-south1-c'> succeeded after 254.228 seconds
+2021-05-27 07:30:30,585 INFO     ___FILE_ONLY___ Updated [https://container.googleapis.com/v1/projects/coastal-hue-314206/zones/asia-south1-c/clusters/my-cluster].
+
+2021-05-27 07:30:30,587 INFO     root            Display format: "default"
+2021-05-27 07:30:30,587 DEBUG    root            SDK update checks are disabled.

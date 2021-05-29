@@ -1,0 +1,87 @@
+2021-05-20 11:20:31,340 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-20 11:20:31,345 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-20 11:20:31,348 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'create']
+2021-05-20 11:20:31,407 DEBUG    root            Running [gcloud.container.clusters.create] with arguments: [NAME: "my-cluster"]
+2021-05-20 11:20:31,412 WARNING  root            Accessing a Kubernetes Engine cluster requires the kubernetes commandline
+client [kubectl]. To install, run
+  $ gcloud components install kubectl
+
+2021-05-20 11:20:31,413 WARNING  root            Starting in January 2021, clusters will use the Regular release channel by default when `--cluster-version`, `--release-channel`, `--no-enable-autoupgrade`, and `--no-enable-autorepair` flags are not specified.
+2021-05-20 11:20:31,414 WARNING  root            Currently VPC-native is not the default mode during cluster creation. In the future, this will become the default mode and can be disabled using `--no-enable-ip-alias` flag. Use `--[no-]enable-ip-alias` flag to suppress this warning.
+2021-05-20 11:20:31,414 WARNING  root            Starting with version 1.18, clusters will have shielded GKE nodes by default.
+2021-05-20 11:20:31,414 WARNING  root            Your Pod address range (`--cluster-ipv4-cidr`) can accommodate at most 1008 node(s). 
+2021-05-20 11:20:31,415 WARNING  root            Starting with version 1.19, newly created clusters and node-pools will have COS_CONTAINERD as the default node image when no image type is specified.
+2021-05-20 11:20:35,981 INFO     ___FILE_ONLY___ Creating cluster my-cluster in asia-south1-c...
+2021-05-20 11:23:59,479 INFO     root            Operation <Operation
+ clusterConditions: []
+ endTime: '2021-05-20T11:23:58.592078811Z'
+ name: 'operation-1621509635956-13559f16'
+ nodepoolConditions: []
+ operationType: OperationTypeValueValuesEnum(CREATE_CLUSTER, 1)
+ progress: <OperationProgress
+ metrics: [<Metric
+ intValue: 1
+ name: 'CLUSTER_HEALTHCHECKING'>, <Metric
+ intValue: 2
+ name: 'CLUSTER_HEALTHCHECKING_TOTAL'>]
+ stages: []>
+ selfLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/operations/operation-1621509635956-13559f16'
+ startTime: '2021-05-20T11:20:35.956691597Z'
+ status: StatusValueValuesEnum(DONE, 3)
+ targetLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/clusters/my-cluster'
+ zone: 'asia-south1-c'> succeeded after 203.497 seconds
+2021-05-20 11:23:59,611 INFO     ___FILE_ONLY___ Created [https://container.googleapis.com/v1/projects/coastal-hue-314206/zones/asia-south1-c/clusters/my-cluster].
+
+2021-05-20 11:23:59,612 INFO     ___FILE_ONLY___ To inspect the contents of your cluster, go to: https://console.cloud.google.com/kubernetes/workload_/gcloud/asia-south1-c/my-cluster?project=coastal-hue-314206
+
+2021-05-20 11:23:59,612 DEBUG    root            unable to load default kubeconfig: unable to load kubeconfig for /root/.kube/config: Unable to read file [/root/.kube/config]: [Errno 2] No such file or directory: '/root/.kube/config'; recreating /root/.kube/config
+2021-05-20 11:23:59,620 DEBUG    root            Saved kubeconfig to /root/.kube/config
+2021-05-20 11:23:59,620 INFO     ___FILE_ONLY___ kubeconfig entry generated for my-cluster.
+
+2021-05-20 11:23:59,622 INFO     root            Display format: "
+    table(
+        name,
+        zone:label=LOCATION,
+        master_version():label=MASTER_VERSION,
+        endpoint:label=MASTER_IP,
+        nodePools[0].config.machineType,
+        currentNodeVersion:label=NODE_VERSION,
+        firstof(currentNodeCount,initialNodeCount):label=NUM_NODES,
+        status
+    )
+"
+2021-05-20 11:23:59,625 INFO     ___FILE_ONLY___ NAME
+2021-05-20 11:23:59,625 INFO     ___FILE_ONLY___         
+2021-05-20 11:23:59,625 INFO     ___FILE_ONLY___ LOCATION
+2021-05-20 11:23:59,625 INFO     ___FILE_ONLY___        
+2021-05-20 11:23:59,625 INFO     ___FILE_ONLY___ MASTER_VERSION
+2021-05-20 11:23:59,625 INFO     ___FILE_ONLY___    
+2021-05-20 11:23:59,626 INFO     ___FILE_ONLY___ MASTER_IP
+2021-05-20 11:23:59,626 INFO     ___FILE_ONLY___      
+2021-05-20 11:23:59,626 INFO     ___FILE_ONLY___ MACHINE_TYPE
+2021-05-20 11:23:59,626 INFO     ___FILE_ONLY___   
+2021-05-20 11:23:59,627 INFO     ___FILE_ONLY___ NODE_VERSION
+2021-05-20 11:23:59,627 INFO     ___FILE_ONLY___      
+2021-05-20 11:23:59,627 INFO     ___FILE_ONLY___ NUM_NODES
+2021-05-20 11:23:59,627 INFO     ___FILE_ONLY___   
+2021-05-20 11:23:59,627 INFO     ___FILE_ONLY___ STATUS
+2021-05-20 11:23:59,627 INFO     ___FILE_ONLY___ 
+
+2021-05-20 11:23:59,627 INFO     ___FILE_ONLY___ my-cluster
+2021-05-20 11:23:59,628 INFO     ___FILE_ONLY___   
+2021-05-20 11:23:59,628 INFO     ___FILE_ONLY___ asia-south1-c
+2021-05-20 11:23:59,628 INFO     ___FILE_ONLY___   
+2021-05-20 11:23:59,628 INFO     ___FILE_ONLY___ 1.19.9-gke.1400
+2021-05-20 11:23:59,628 INFO     ___FILE_ONLY___   
+2021-05-20 11:23:59,628 INFO     ___FILE_ONLY___ 35.244.25.27
+2021-05-20 11:23:59,628 INFO     ___FILE_ONLY___   
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___ e2-medium
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___      
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___ 1.19.9-gke.1400
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___   
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___ 3
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___           
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___ RUNNING
+2021-05-20 11:23:59,629 INFO     ___FILE_ONLY___ 
+
+2021-05-20 11:23:59,630 DEBUG    root            SDK update checks are disabled.

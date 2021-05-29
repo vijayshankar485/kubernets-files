@@ -1,0 +1,24 @@
+2021-05-27 05:42:32,638 DEBUG    root            Loaded Command Group: ['gcloud', 'container']
+2021-05-27 05:42:32,649 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2021-05-27 05:42:32,652 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'resize']
+2021-05-27 05:42:32,653 WARNING  root            The --size flag is now deprecated. Please use `--num-nodes` instead.
+2021-05-27 05:42:32,728 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2021-05-27 05:42:32,734 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2021-05-27 05:42:32,933 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2021-05-27 05:42:32,972 DEBUG    root            Running [gcloud.container.clusters.resize] with arguments: [--size: "3", NAME: "my-cluster"]
+2021-05-27 05:42:37,496 INFO     ___FILE_ONLY___ Resizing my-cluster...
+2021-05-27 05:43:38,600 INFO     root            Operation <Operation
+ clusterConditions: []
+ endTime: '2021-05-27T05:43:33.678813669Z'
+ name: 'operation-1622094157464-4ca341ba'
+ nodepoolConditions: []
+ operationType: OperationTypeValueValuesEnum(SET_NODE_POOL_SIZE, 14)
+ selfLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/operations/operation-1622094157464-4ca341ba'
+ startTime: '2021-05-27T05:42:37.464431427Z'
+ status: StatusValueValuesEnum(DONE, 3)
+ targetLink: 'https://container.googleapis.com/v1/projects/292914610678/zones/asia-south1-c/clusters/my-cluster/nodePools/default-pool'
+ zone: 'asia-south1-c'> succeeded after 61.103 seconds
+2021-05-27 05:43:38,663 INFO     ___FILE_ONLY___ Updated [https://container.googleapis.com/v1/projects/coastal-hue-314206/zones/asia-south1-c/clusters/my-cluster].
+
+2021-05-27 05:43:38,670 INFO     root            Display format: "default"
+2021-05-27 05:43:38,670 DEBUG    root            SDK update checks are disabled.

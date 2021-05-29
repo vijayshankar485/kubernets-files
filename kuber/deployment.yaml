@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    app: nginx485    
+spec: 
+   replicas: 70
+   selector: 
+     matchLabels: 
+       app: nginx485  
+   template: 
+     metadata:
+       labels: 
+          app: nginx485
+     spec: 
+       containers:
+       - name: sample-containers
+         image: nginx
+         ports:
+         - containerPort: 80          
+
+
